@@ -1,36 +1,37 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: The Game
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: Make a Game
 
 
 ## Daniel meets Project 1
 
 
-##### Trivia Hangman
+### Trivia Hangman
 Test Yourself in this life or death game of Trivia Hangman - where your correct answers hold a stick figure's life in the balance!
 
 
 ---
 
-###Technologies used
+#####Technologies used
 
 I'm planning to use p5js for the Hangman image and more straightforward js/jQuery on the right hand side.  If I have some extra time after finishing I'll try to animate the addition of stick figure body parts.
 
 ---
 
-###The approach taken
+#####The approach taken
 
 Currently I am approaching the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of seven errors and a max of 10 correct answers to win the game.
 
 ---
 
-###Installation instructions
+#####Installation instructions
 
 Load it in your browser?
 
 ---
 
-###Unsolved problems
+#####Unsolved problems
 
 More to come :/
+
 ---
 
 
