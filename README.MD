@@ -1,33 +1,40 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: The Game
 
-### Overview
 
-Let's start out with something fun - **a game!**
+## Daniel meets Project 1
 
-Everyone will get a chance to **be creative**, and work through some really **tough programming challenges**. Since you've already gotten your feet wet with Tic Tac Toe, it's up to you to come up with a fun and interesting game to build.
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got!
+##### Trivia Hangman
+Test Yourself in this life or death game of Trivia Hangman - where your correct answers hold a stick figure's life in the balance!
 
-**You may not follow a tutorial to build your game.**
-
-## Objectives
-
-- Manage yourself (your time and your emotions) when given a large amount of unstructured work
-- Gain experience building a more complex application
-- Document your work and share it with the public in an effective and articulate manner
-- Learn new technologies by reading documentation and experimenting
-
-## Project Sprint Schedule
-
-Even though it's a project week, **we still take attendance at 9am sharp**.  
-Your breaks and lunch will still be at the same times as during lesson weeks.    
-You will be scheduled for pairing sessions with members of the instructional team.    
-You may work in the lounge for project time, but you **must** be back in the classroom by 2pm for stand ups and again by 4:55pm for a daily wrap-up.  
-**You must stay on campus until 5pm.** 
 
 ---
 
-### Technical Requirements
+###Technologies used
+
+I'm planning to use p5js for the Hangman image and more straightforward js/jQuery on the right hand side.  If I have some extra time after finishing I'll try to animate the addition of stick figure body parts.
+
+---
+
+###The approach taken
+
+Currently I am approaching the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of seven errors and a max of 10 correct answers to win the game.
+
+---
+
+###Installation instructions
+
+Load it in your browser?
+
+---
+
+###Unsolved problems
+
+More to come :/
+---
+
+
+<!-- ### Technical Requirements
 
 Your app must:
 
@@ -63,30 +70,10 @@ Your app must:
 
 ---
 
-### Potential Project Ideas
 
-##### Concentration
-Sometimes just called "Memory", it's a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. If you get all the matching cards, you've won!
-
-##### Trivia
-Test your wits & knowledge with whatever-the-heck you know about (so you can actually win). Guess answers, have the computer tell you how right you are!
-
-##### Blackjack
-Make a one player game where people down on their luck can lose all their money by guessing which card the computer will deal next!
-
-##### Simon
-A game with 4 colored "buttons". In this game, a round consists of lighting up one or more buttons in a random order, after which the player must reproduce that order by pressing the buttons. As the game progresses, the number of buttons to be pressed increases.
-
----
 
 ### Useful Resources
 
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
 * **[jQuery Docs](http://api.jquery.com)** _(if you're using jQuery)_
-* **[Github Pages](https://pages.github.com)** _(for hosting your game)_
-
----
-
-### Project Feedback + Evaluation
-
-You will receive feedback on your project from an instructor and a grade of pass or fail. You will be shown the grading rubric before demo day.
+* **[Github Pages](https://pages.github.com)** _(for hosting your game)_ -->
