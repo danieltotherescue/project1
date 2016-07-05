@@ -26,7 +26,8 @@ function setup() {
 }
 
 function draw() {
-var slider = createSlider(0, 255, 127);
+  // slider functionality if I have time
+// var slider = createSlider(0, 255, 127);
 
 }
 
