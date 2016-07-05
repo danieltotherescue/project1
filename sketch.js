@@ -9,7 +9,12 @@
 // }
 
 function setup() {
-  createCanvas(700, 580);
+  var canvas = createCanvas(700, 500);
+
+  // Move the canvas so it's inside our <div id="sketchHolder">.
+  canvas.parent('sketchHolder');
+
+  background(255, 0, 0);
   strokeWeight(6);
   line(515,115,600,115); //top horizontal
   line(515,115,515,130); //top vertical tip
