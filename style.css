@@ -31,7 +31,7 @@ h1, h3{
 }
 
 #sketchHolder {
-  float: right;;
+  float: right;
   max-width: 50%;
   /*position: relative;
   right: 200px;*/
@@ -40,4 +40,10 @@ h1, h3{
 
 li {
   list-style-type: none;
+}
+
+.answers {
+  /*width: 600px;
+  height: 250px;
+  border: 1px solid #000000;*/
 }

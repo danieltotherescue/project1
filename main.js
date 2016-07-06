@@ -91,9 +91,33 @@ var randQuestion = function () {
 }
 
 //brute force/one by one approach
-$('#quizContent').html(randQuestion);
+$('#prompt').html(randQuestion);
 // $('#answers').html('Question 1 - what is your favorite color?');
 
+$('#nextQ').on('click', function(){
+  var newObject = questions.splice(Math.floor(Math.random() * questions.length), 1)[0];
+  var newQuestion = newObject.prompt;
+  var newAnswer = newObject.answers;
+  $('#instructions').html("");
+  $('#prompt').html(newQuestion);
+  $('#a1').html(newAnswer[0]);
+  $('#a2').html(newAnswer[1]);
+  $('#a3').html(newAnswer[2]);
+  $('#a4').html(newAnswer[3]);
+
+  // song.play();
+  // song.loop();
+})
+//maybe shorter with an if statement if extra time
+$('#a1').hover(function(){
+  $(this).css("background", "dodgerblue");
+})
+
+$('#a1').mouseout(function(){
+  $(this).css("background", "white");
+})
+
+//reference section
 
 // questions.forEach(function(answer){
 // $('#answers').append('<button id="[i]"></button>' +answer+ )

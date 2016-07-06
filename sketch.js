@@ -29,6 +29,7 @@ function draw() {
   // slider functionality if I have time
 // var slider = createSlider(0, 255, 127);
 
+//draw parts of the man at each wrong answer click event - result of a conditional
 }
 
 
