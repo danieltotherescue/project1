@@ -42,6 +42,19 @@ li {
   list-style-type: none;
 }
 
+#nextQ {
+    height:20px; 
+    width:100px;
+    margin: -20px -50px;
+    position:relative;
+    top:50%;
+    left:50%;
+}
+
+.selectors {
+  padding-top: 5px;
+}
+
 .answers {
   /*width: 600px;
   height: 250px;
