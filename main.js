@@ -75,11 +75,6 @@ var questions = [
 
 
 
-
-//currentQ
-
-
-
 //for loop to go through answers and create buttons for each
 // for (var i=0; i<answers.length; i++) {
 //
@@ -115,10 +110,10 @@ function startGame() {
     var newAnswer = newObject.answers;
     $('#instructions').html("");
     $('#prompt').html(newQuestion);
-    $('#a1').html(newAnswer[0]);
-    $('#a2').html(newAnswer[1]);
-    $('#a3').html(newAnswer[2]);
-    $('#a4').html(newAnswer[3]);
+    $('#a1').html("a. " + newAnswer[0]);
+    $('#a2').html("b. " + newAnswer[1]);
+    $('#a3').html("c. " + newAnswer[2]);
+    $('#a4').html("d. " + newAnswer[3]);
     correctAnswer = newObject.corrAns;
   }
 
@@ -127,12 +122,49 @@ function startGame() {
       alert('You are correct!');
       nextQuestion();
       //tally correct answers
-      $('#tally').html();
+      // $('#tally').html("Score: " + tally + " correct answers out of " + questions.length + "possible.";)
       //no drawing on the hangin' pole
     }else {
       alert("That's Wrong, baby.");
       //draw a section of the man
       nextQuestion();
+      var hangingMan = -1
+      var head = ellipse(515,165,60,60);
+      var torso = line(515,195,515,280);
+      var rArm = line(495,245,515,215);
+      var lArm = line(515,215,535,245);
+      var rLeg = line(485,330,515,280);
+      var lLeg = line(515,280,545,330);
+      var parts = [head, torso, rArm, lArm, rLeg, lLeg];
+      hangingMan++;
+      parts[0];
+
+      switch (parts){
+        case 0:
+          head;
+          break;
+        case 1:
+          torso;
+          break;
+        case 2:
+          rArm;
+          break;
+        case 3:
+          lArm;
+          break;
+        case 4:
+          rLeg;
+          break;
+        case 5:
+          lLeg;
+          break;
+        default:
+          console.log("whatever, man");
+      }
+
+      if (hangingMan === 5){
+        $('#prompt').html("GAME OVER, YOU MURDERER!");
+      }
     }
   })
 
@@ -148,6 +180,21 @@ function startGame() {
 }
 
 
+// var hangingMan = -1
+// var head = ellipse(515,175,80,80);
+// var torso = line(515,195,515,280);
+// var rArm = line(495,245,515,215);
+// var lArm = line(515,215,535,245);
+// var rLeg = line(485,330,515,280);
+// var lLeg = line(515,280,545,330);
+// var parts = [head, torso, rArm, lArm, rLeg, lLeg];
+
+
+
+// questions.foreach(function(countAns){
+//   if
+
+// })
 //reference section
 
 // questions.forEach(function(answer){
