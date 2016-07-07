@@ -105,7 +105,7 @@ function startGame() {
     var newAnswer = newObject.answers;
 
     $8bitPew = $('<audio autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
-    $('body').append($8bitPew);
+    $('quizContent').append($8bitPew);
 
     $('#instructions').html("");
     $('#headerText').html("");
@@ -125,9 +125,12 @@ function startGame() {
       nextQuestion();
       //tally correct answers
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
-      if (counterRight === 7){
+      if (counterRight === 1){
         $('#quizSection').html("<h1>YOU WON THE GAME! THE MAN IS SAVED! YOU ARE AMAZING!</h1>");
         $('#quizSection').append("<button id='startOver'>Another Game?</button>");
+        $('#quizSection').append('<img src="http://mashable.com/wp-content/uploads/2013/07/Anchorman.gif" alt="anchorman excitement">')
+        $Ooohhhh = $('<audio autoplay> <source src="assets/Ooohhhh.mp3" type="audio/mpeg">Your browser is not good so it does not support the “Ooohhhh” noise</audio>')
+        $('quizSection').append($Ooohhhh);
         $('#startOver').click(function() {
             location.reload();
         });
