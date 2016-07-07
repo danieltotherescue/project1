@@ -73,24 +73,9 @@ var questions = [
 
 }]
 
-
-
-//for loop to go through answers and create buttons for each
-// for (var i=0; i<answers.length; i++) {
-//
-// }
-
-
-// var randQuestion = function () {
-//   return questions.splice(Math.floor(Math.random() * questions.length), 1)[0];
-// }
 var correctAnswer;
 var currentAnswers;
 var hangingMan = 0;
-
-
-//brute force/one by one approach
-// $('#prompt').html(randQuestion);
 
 
 $('#nextQ').click(function(){
@@ -138,25 +123,30 @@ function startGame() {
   // parts = [head, torso, rArm, lArm, rLeg, lLeg];
   nextQuestion();
 
+  var counterRight = 0;
+
   function nextQuestion(){
     var newObject = questions.splice(Math.floor(Math.random() * questions.length), 1)[0];
     var newQuestion = newObject.prompt;
     var newAnswer = newObject.answers;
     $('#instructions').html("");
+    $('#headerText').html("");
     $('#prompt').html(newQuestion);
     $('#a1').html("a. " + newAnswer[0]);
     $('#a2').html("b. " + newAnswer[1]);
     $('#a3').html("c. " + newAnswer[2]);
     $('#a4').html("d. " + newAnswer[3]);
     correctAnswer = newObject.corrAns;
+
   }
 
   $('.selectors').on('click', function(){
     if  (this.id == correctAnswer){
+      counterRight++
       alert('You are correct!');
       nextQuestion();
       //tally correct answers
-      // $('#tally').html("Score: " + tally + " correct answers out of " + questions.length + "possible.";)
+      $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
       //no drawing on the hangin' pole
     }else {
       alert("That's Wrong, baby.");
@@ -165,8 +155,15 @@ function startGame() {
       parts[hangingMan]();
       hangingMan++;
 
+      $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
+
       if (hangingMan === 6){
         $('#quizSection').html("<h1>GAME OVER, YOU MURDERER!</h1>");
+        $('#quizSection').append("<button id='startOver'>Start Over</button>");
+        $('#startOver').click(function() {
+            location.reload();
+        });
+
       }
     }
   })

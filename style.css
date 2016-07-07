@@ -42,17 +42,23 @@ li {
   list-style-type: none;
 }
 
-#nextQ {
-    height:20px;
+#nextQ, #startOver {
+    height:40px;
     width:100px;
     margin: -20px -50px;
     position:relative;
     top:50%;
     left:50%;
+    bottom: -70px;
 }
 
 .selectors {
   padding-top: 5px;
+}
+
+#tally {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .answers {
