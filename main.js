@@ -1,20 +1,6 @@
 console.log("connected")
-//referred to alot - makes workflow easier
 
-// document.getElementById('quizSection').innerHTML= "Are you ready to begin the game? Click to begin!";
-
-// document.getElementById('quizSection').addEventListener('click', function(){
-// document.getElementById('quizSection').innerHTML= "";
-// });
-
-//defining intial elements
-// var quizContent = $('quizContent'),
-//   promptHolder = $('prompt'),
-//   answersHolder = $('answers')
-
-//initial variables
-
-//trivia questions arranged in an array to later randomize and prompt the user
+//trivia questions arranged in an array
 var questions = [
   {
     prompt: "How many chickens are consumed in the US each year?",
@@ -84,7 +70,7 @@ $('#nextQ').click(function(){
   $('#nextQ').hide();
 
   startGame();
-    // create & append div with score
+
 })
 
 function drawHead() {
@@ -108,19 +94,7 @@ function drawlLeg() {
 
 var parts = [drawHead, drawTorso, drawrArm, drawlArm, drawrLeg, drawlLeg]
 function startGame() {
-  // head = ellipse(515,165,60,60);
-  // $("head").hide();
-  // torso = line(515,195,515,280);
-  // $("torso").hide();
-  // rArm = line(495,245,515,215);
-  // $("rArm").hide();
-  // lArm = line(515,215,535,245);
-  // $("lArm").hide();
-  // rLeg = line(485,330,515,280);
-  // $("rLeg").hide();
-  // lLeg = line(515,280,545,330);
-  // $("lLeg").hide();
-  // parts = [head, torso, rArm, lArm, rLeg, lLeg];
+
   nextQuestion();
 
   var counterRight = 0;
@@ -129,6 +103,10 @@ function startGame() {
     var newObject = questions.splice(Math.floor(Math.random() * questions.length), 1)[0];
     var newQuestion = newObject.prompt;
     var newAnswer = newObject.answers;
+
+    $8bitPew = $('<audio autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
+    $('body').append($8bitPew);
+
     $('#instructions').html("");
     $('#headerText').html("");
     $('#prompt').html(newQuestion);
@@ -142,28 +120,36 @@ function startGame() {
 
   $('.selectors').on('click', function(){
     if  (this.id == correctAnswer){
-      counterRight++
+      counterRight++;
       alert('You are correct!');
       nextQuestion();
       //tally correct answers
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
-      //no drawing on the hangin' pole
+      if (counterRight === 7){
+        $('#quizSection').html("<h1>YOU WON THE GAME! THE MAN IS SAVED! YOU ARE AMAZING!</h1>");
+        $('#quizSection').append("<button id='startOver'>Another Game?</button>");
+        $('#startOver').click(function() {
+            location.reload();
+        });
+      }
+
     }else {
       alert("That's Wrong, baby.");
       //draw a section of the man
       nextQuestion();
       parts[hangingMan]();
       hangingMan++;
-
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
 
       if (hangingMan === 6){
         $('#quizSection').html("<h1>GAME OVER, YOU MURDERER!</h1>");
         $('#quizSection').append("<button id='startOver'>Start Over</button>");
+
+//add lose game noise
+        // $8bitPew = $('<audio autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
+        // $('body').append($8bitPew);
         $('#startOver').click(function() {
             location.reload();
-        var audio = new Audio('assets/8-bit-pew.wav');
-        audio.play();
         });
 
       }
@@ -181,38 +167,14 @@ function startGame() {
 
 }
 
-// $8bitPew = $('<audio controls autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
-//
-// $('body').append($8bitPew);
-
-// var hangingMan = -1
-// var head = ellipse(515,175,80,80);
-// var torso = line(515,195,515,280);
-// var rArm = line(495,245,515,215);
-// var lArm = line(515,215,535,245);
-// var rLeg = line(485,330,515,280);
-// var lLeg = line(515,280,545,330);
-// var parts = [head, torso, rArm, lArm, rLeg, lLeg];
-
-
-
-// questions.foreach(function(countAns){
-//   if
-
-// })
-//reference section
-
-// questions.forEach(function(answer){
-// $('#answers').append('<button id="[i]"></button>' +answer+ )
-// })
-
-
-//create array of user answers to generate final result
-
-
-// array of jpeg elements of the manthat will be referenced and loaded on each incorrect answer submission click
-//create function to generate div by altering or adding html in that div
-
 //for music if I have time later
 // song.play();
 // song.loop();
+
+
+// vanillaJS to use later?
+// document.getElementById('quizSection').innerHTML= "Are you ready to begin the game? Click to begin!";
+
+// document.getElementById('quizSection').addEventListener('click', function(){
+// document.getElementById('quizSection').innerHTML= "";
+// });

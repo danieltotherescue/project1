@@ -1,26 +1,28 @@
 
 /*vendor prefixes*/
-.page-wrap {
+/*.page-wrap {
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;  /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-}
+  /*display: -ms-flexbox;  /* TWEENER - IE 10 */
+  /*display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  /*display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+/*}*/
 
+ /*for screens smaller than 980 */
 @media screen and (max-width: 980px) {
-    #pagewrap {
-        width: 94%;
+
+    #quizSection, #sketchHolder{
+        max-width: 100%;
+        float: none;
     }
-    #content {
-        width: 65%;
-    }
-    #sidebar {
-        width: 30%;
-    }
+
 }
 
-body{
-  /*background-color:red;*/
+footer {
+  float:clear;
+}
+
+.container {
+  width: 94%;
 }
 
 h1, h3{
@@ -32,9 +34,7 @@ h1, h3{
 
 #quizSection {
   float:left;
-  /*max-width: 50%;*/
-  padding: 40px 40px 0;
-  border: 1px solid black;
+  max-width: 48%;
     position: relative;
     width: 600px;
     height: 460px;
@@ -42,9 +42,13 @@ h1, h3{
 
 }
 
+canvas {
+  max-width: 100%;
+}
+
 #sketchHolder {
   float: right;
-  max-width: 50%;
+  max-width: 48%;
   /*position: relative;
   right: 200px;*/
   border: 1px solid black;

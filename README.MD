@@ -1,4 +1,4 @@
-# !Project #1: Game by Daniel
+#Project #1: Game by Daniel
 
 
 ## Daniel meets Project 1
@@ -7,73 +7,75 @@
 ### Trivia Hangman
 Test Yourself in this life or death game of Trivia Hangman - where your correct answers hold a stick figure's life in the balance!
 
+Directions: Answer the trivia questions.  Each correct answer results in good vibes and no extra drawn body parts. Each incorrect answer gets the stick figure man one step closer to oblivion.  If you answer 8 questions correctly, you win! Answer well, my friends!  
+
+This is a one person game, but can be played cooperatively as a team. Are you ready? Click the button if you're ready.
+(Displayed on initial loading of the page as well)
+
+Rules: Answer the trivia questions.  If trivia questions are answered incorrectly, a section of the man will be drawn.  If the man in completely drawn (taking six incorrect answers to do so), you have lost the game.  You will then have an opportunity to try again.
 
 ---
 
 #####Technologies used
 
-I'm planning to use p5js for the Hangman image and more straightforward js/jQuery on the right hand side.  If I have some extra time after finishing I'll try to animate the addition of stick figure body parts.
+The page was made with HTML, CSS, vanilla Javascript, JQuery, and p5.js. Some audio samples were also used to enhance the site. I used p5js for the Hangman image and more straightforward js/jQuery on the left hand side.  
+
+If I have some extra time after finishing I'll try to animate the addition of stick figure body parts.
+
+---
+
+#####MVP
+At a minimum, the game needs to have sufficient functionality to:
+
+• ask the user questions
+• take user input
+• have win logic to know when the user has won or lost the game
+
+######User stories on Trello
+
+User stories and project flow were made and tracked using Trello.  It can be viewed at https://trello.com/b/LhOJ1oPL/project-1
 
 ---
 
 #####The approach taken
 
-Currently I am approaching the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of seven errors and a max of 10 correct answers to win the game.
+I approached the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of six errors and 8 correct answers to win the game.
+
+I spent a bit too much time investigating options with p5, and when I felt time pressure I thought I might move to using canvas as a more straightforward option, but in the end p5 worked just fine and was easier to link to the site than I was thinking it would be. In a nutshell: Get the game functionality and win logic up and running, then make sure the canvas section is linked and working. Then make sure it can be cross-platform.
 
 ---
 
 #####Installation instructions
 
-Load it in your browser?
+Visit the following link:
+https://danieltotherescue.github.io/project1/
 
 ---
 
 #####Unsolved problems
 
-More to come :/
+1. Making an alternative to the alert messages.
+2. Optimal responsiveness
+
+######Stretch Goals
+
+1. Add additional p5 functionality, including background options, animation of the canvas,
+2. Suspenseful music to set the proper mood for the user.
 
 ---
 
 
-<!-- ### Technical Requirements
 
+<!--
 Your app must:
 
 * **Render a game in the browser**
-* **Switch turns** between two players (if it's a two-player game)
-* **Design logic for winning** & **visually display which player won**
-* **Include separate HTML / CSS / JavaScript files**
 * Stick with **KISS (Keep It Simple Son)** and **DRY (Don't Repeat Yourself)** principles
 * Use **jQuery** for **DOM manipulation** and **vanilla JavaScript** for **game logic**
-* **Deploy your game online**, where the rest of the world can access it
 * Use **semantic markup** for HTML and CSS (adhere to best practices)
 
----
 
-### Necessary Deliverables
-
-* A **working game, built by you**, hosted somewhere on the internet
-* A **link to your hosted working game** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted game, and *frequent commits* dating back to the very beginning of the project
-* **A ``readme.md`` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
-
----
-
-### Suggested Ways to Get Started
-
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually. Use pseudocode! Use whiteboards!
-* **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
-* **Use your time wisely** You have a three day weekend leading into project week. Get as much coding done as you can over the weekend, and come prepared with questions/blockers on Tuesday, instead of, you know... _procrastinating_.
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
-* **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
-* **Don't wait until Friday morning to deploy for the first time** Deploying doesn't mean you have to stop working, so deploy early in case it takes longer than you anticipate, and then redeploy when you have more features ready.
-
----
-
-
-
-### Useful Resources
+### Useful Resources for my reference
 
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
 * **[jQuery Docs](http://api.jquery.com)** _(if you're using jQuery)_
