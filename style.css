@@ -59,6 +59,7 @@ li {
 #tally {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  text-transform: bold;
 }
 
 .answers {

@@ -162,6 +162,8 @@ function startGame() {
         $('#quizSection').append("<button id='startOver'>Start Over</button>");
         $('#startOver').click(function() {
             location.reload();
+        var audio = new Audio('assets/8-bit-pew.wav');
+        audio.play();
         });
 
       }
@@ -179,6 +181,9 @@ function startGame() {
 
 }
 
+// $8bitPew = $('<audio controls autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
+//
+// $('body').append($8bitPew);
 
 // var hangingMan = -1
 // var head = ellipse(515,175,80,80);
