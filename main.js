@@ -86,6 +86,7 @@ var questions = [
 // }
 var correctAnswer;
 var currentAnswers;
+var hangingMan = 0;
 
 
 //brute force/one by one approach
@@ -101,7 +102,40 @@ $('#nextQ').click(function(){
     // create & append div with score
 })
 
+function drawHead() {
+  ellipse(515,165,60,60);
+}
+function drawTorso() {
+  line(515,195,515,280);
+}
+function drawrArm() {
+  line(495,245,515,215);
+}
+function drawlArm() {
+  line(515,215,535,245);
+}
+function drawrLeg() {
+  line(485,330,515,280);
+}
+function drawlLeg() {
+  line(515,280,545,330);
+}
+
+var parts = [drawHead, drawTorso, drawrArm, drawlArm, drawrLeg, drawlLeg]
 function startGame() {
+  // head = ellipse(515,165,60,60);
+  // $("head").hide();
+  // torso = line(515,195,515,280);
+  // $("torso").hide();
+  // rArm = line(495,245,515,215);
+  // $("rArm").hide();
+  // lArm = line(515,215,535,245);
+  // $("lArm").hide();
+  // rLeg = line(485,330,515,280);
+  // $("rLeg").hide();
+  // lLeg = line(515,280,545,330);
+  // $("lLeg").hide();
+  // parts = [head, torso, rArm, lArm, rLeg, lLeg];
   nextQuestion();
 
   function nextQuestion(){
@@ -128,42 +162,11 @@ function startGame() {
       alert("That's Wrong, baby.");
       //draw a section of the man
       nextQuestion();
-      var hangingMan = -1
-      var head = ellipse(515,165,60,60);
-      var torso = line(515,195,515,280);
-      var rArm = line(495,245,515,215);
-      var lArm = line(515,215,535,245);
-      var rLeg = line(485,330,515,280);
-      var lLeg = line(515,280,545,330);
-      var parts = [head, torso, rArm, lArm, rLeg, lLeg];
+      parts[hangingMan]();
       hangingMan++;
-      parts[0];
 
-      switch (parts){
-        case 0:
-          head;
-          break;
-        case 1:
-          torso;
-          break;
-        case 2:
-          rArm;
-          break;
-        case 3:
-          lArm;
-          break;
-        case 4:
-          rLeg;
-          break;
-        case 5:
-          lLeg;
-          break;
-        default:
-          console.log("whatever, man");
-      }
-
-      if (hangingMan === 5){
-        $('#prompt').html("GAME OVER, YOU MURDERER!");
+      if (hangingMan === 6){
+        $('#quizSection').html("<h1>GAME OVER, YOU MURDERER!</h1>");
       }
     }
   })
