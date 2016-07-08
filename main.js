@@ -136,7 +136,7 @@ function startGame() {
       alert('You are correct!');
       nextQuestion();
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
-      if (counterRight === 1){
+      if (counterRight === 7){
         $('#quizSection').html("<h1>YOU WON THE GAME! THE MAN IS SAVED! YOU ARE AMAZING!</h1>");
         $('#quizSection').append("<button class='animated infinite pulse' id='startOver'>Another Game?</button>");
         $('#quizSection').append('<img src="http://mashable.com/wp-content/uploads/2013/07/Anchorman.gif" alt="anchorman excitement">')

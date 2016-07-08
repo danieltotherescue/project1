@@ -60,6 +60,7 @@ https://danieltotherescue.github.io/project1/
 1. Making an alternative to the alert messages.
 2. Optimal responsiveness.
 3. Ability to resize the canvas without issues to accomodate future whims.
+4. Trying to move elements without effecting other elements (very frustrating).
 
 ######Stretch Goals
 
