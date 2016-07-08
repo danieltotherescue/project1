@@ -39,7 +39,7 @@ User stories and project flow were made and tracked using Trello.  It can be vie
 
 #####The approach taken
 
-I approached the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of six errors and 8 correct answers to win the game.
+I approached the project from first generating the correct functionality of the trivia input (multiple choice) and output (correct or incorrect given via conditional loop).  When an incorrect answer is given, more pieces are added to the man, with a max of six errors and 7 correct answers to win the game.
 
 I spent a bit too much time investigating options with p5, and when I felt time pressure I thought I might move to using canvas as a more straightforward option, but in the end p5 worked just fine and was easier to link to the site than I was thinking it would be. In a nutshell: Get the game functionality and win logic up and running, then make sure the canvas section is linked and working. Then make sure it can be cross-platform.
 
