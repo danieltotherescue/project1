@@ -47,6 +47,9 @@ I spent a bit too much time investigating options with p5, and when I felt time 
 
 #####Installation instructions
 
+Clone this repo:
+Open the index file in the browser.
+
 Visit the following link:
 https://danieltotherescue.github.io/project1/
 

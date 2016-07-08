@@ -62,7 +62,9 @@ var questions = [
 var correctAnswer;
 var currentAnswers;
 var hangingMan = 0;
-
+//autoplay music
+$metroid = $('<audio controls autoplay> <source src="assets/advantage-metroid.mp3" type="audio/mpeg">Your browser is not good so it does not support the “metroid” noise</audio>')
+$('body').append($metroid);
 
 $('#nextQ').click(function(){
   console.log("Is working?");
@@ -107,7 +109,7 @@ function startGame() {
     $8bitPew = $('<audio autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
     $('quizContent').append($8bitPew);
 
-    $('#instructions').html("");
+    $('#instructions').html("(click your chosen answer)");
     $('#headerText').html("");
     $('#prompt').html(newQuestion);
     $('#a1').html("a. " + newAnswer[0]);
@@ -125,7 +127,7 @@ function startGame() {
       nextQuestion();
       //tally correct answers
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
-      if (counterRight === 1){
+      if (counterRight === 7){
         $('#quizSection').html("<h1>YOU WON THE GAME! THE MAN IS SAVED! YOU ARE AMAZING!</h1>");
         $('#quizSection').append("<button id='startOver'>Another Game?</button>");
         $('#quizSection').append('<img src="http://mashable.com/wp-content/uploads/2013/07/Anchorman.gif" alt="anchorman excitement">')
@@ -147,10 +149,6 @@ function startGame() {
       if (hangingMan === 6){
         $('#quizSection').html("<h1>GAME OVER, YOU MURDERER!</h1>");
         $('#quizSection').append("<button id='startOver'>Start Over</button>");
-
-//add lose game noise
-        // $8bitPew = $('<audio autoplay> <source src="assets/8-bit-pew.wav" type="audio/wav">Your browser is not good so it does not support the “8 bit pew” noise</audio>')
-        // $('body').append($8bitPew);
         $('#startOver').click(function() {
             location.reload();
         });

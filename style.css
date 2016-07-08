@@ -24,7 +24,11 @@ h1, h3{
     border: 0;
 }
 
+#prompt {
+  font-size: 90%;
+}
 #quizSection {
+  vertical-align: middle;
   float:left;
   max-width: 48%;
     position: relative;
@@ -70,6 +74,8 @@ li {
 .selectors {
   padding-top: 5px;
   font-family: 'Press Start 2P', cursive;
+  line-height: 150%;
+  font-size: 70%;
 }
 
 #tally {
@@ -85,6 +91,9 @@ li {
 #instructions {
   padding: 1em;
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70%;
+  line-height: 150%;
 }
 
 @media screen and (max-width: 980px) {
