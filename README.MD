@@ -27,11 +27,11 @@ If I have some extra time after finishing I'll try to animate the addition of st
 #####MVP
 At a minimum, the game needs to have sufficient functionality to:
 
-• ask the user questions
-• take user input
-• have win logic to know when the user has won or lost the game
+• ask the user questions     
+• take user input    
+• have win logic to know when the user has won or lost the game    
 
-######User stories on Trello
+#####User stories on Trello
 
 User stories and project flow were made and tracked using Trello.  It can be viewed at https://trello.com/b/LhOJ1oPL/project-1
 
@@ -58,12 +58,13 @@ https://danieltotherescue.github.io/project1/
 #####Unsolved problems
 
 1. Making an alternative to the alert messages.
-2. Optimal responsiveness
+2. Optimal responsiveness.
+3. Ability to resize the canvas without issues to accomodate future whims.
 
 ######Stretch Goals
 
-1. Add additional p5 functionality, including background options, animation of the canvas,
-2. Suspenseful music to set the proper mood for the user.
+1. Add additional p5 functionality, including background options and animation of the canvas.
+2. Adding more questions to make a more evergreen game.
 
 ---
 

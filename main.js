@@ -1,6 +1,6 @@
 console.log("connected")
 
-//trivia questions arranged in an array
+//trivia questions arranged as objects of an array
 var questions = [
   {
     prompt: "How many chickens are consumed in the US each year?",
@@ -59,6 +59,15 @@ var questions = [
 
 }]
 
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
+
 var correctAnswer;
 var currentAnswers;
 var hangingMan = 0;
@@ -77,6 +86,7 @@ $('#nextQ').click(function(){
 
 function drawHead() {
   ellipse(515,165,60,60);
+  $('drawHead').animateCss('bounce');
 }
 function drawTorso() {
   line(515,195,515,280);
@@ -125,11 +135,10 @@ function startGame() {
       counterRight++;
       alert('You are correct!');
       nextQuestion();
-      //tally correct answers
       $('#tally').html("<p>Score: " + counterRight + " correct answers so far.</p>");
-      if (counterRight === 7){
+      if (counterRight === 1){
         $('#quizSection').html("<h1>YOU WON THE GAME! THE MAN IS SAVED! YOU ARE AMAZING!</h1>");
-        $('#quizSection').append("<button id='startOver'>Another Game?</button>");
+        $('#quizSection').append("<button class='animated infinite pulse' id='startOver'>Another Game?</button>");
         $('#quizSection').append('<img src="http://mashable.com/wp-content/uploads/2013/07/Anchorman.gif" alt="anchorman excitement">')
         $Ooohhhh = $('<audio autoplay> <source src="assets/Ooohhhh.mp3" type="audio/mpeg">Your browser is not good so it does not support the “Ooohhhh” noise</audio>')
         $('quizSection').append($Ooohhhh);
@@ -140,7 +149,6 @@ function startGame() {
 
     }else {
       alert("That's Wrong, baby.");
-      //draw a section of the man
       nextQuestion();
       parts[hangingMan]();
       hangingMan++;
@@ -148,7 +156,7 @@ function startGame() {
 
       if (hangingMan === 6){
         $('#quizSection').html("<h1>GAME OVER, YOU MURDERER!</h1>");
-        $('#quizSection').append("<button id='startOver'>Start Over</button>");
+        $('#quizSection').append("<button class='animated infinite pulse' id='startOver'>Start Over</button>");
         $('#startOver').click(function() {
             location.reload();
         });
@@ -157,7 +165,7 @@ function startGame() {
     }
   })
 
-  //mouseover choice colors - maybe shorten with an if statement if extra time
+  //mouseover answer choice colors
   $('#a1, #a2, #a3, #a4').hover(function(){
     $(this).css("background", "lightgray");
   })
@@ -167,15 +175,3 @@ function startGame() {
   })
 
 }
-
-//for music if I have time later
-// song.play();
-// song.loop();
-
-
-// vanillaJS to use later?
-// document.getElementById('quizSection').innerHTML= "Are you ready to begin the game? Click to begin!";
-
-// document.getElementById('quizSection').addEventListener('click', function(){
-// document.getElementById('quizSection').innerHTML= "";
-// });
