@@ -7,7 +7,7 @@
 ### Trivia Hangman
 Test Yourself in this life or death game of Trivia Hangman - where your correct answers hold a stick figure's life in the balance!
 
-Directions: Answer the trivia questions.  Each correct answer results in good vibes and no extra drawn body parts. Each incorrect answer gets the stick figure man one step closer to oblivion.  If you answer 8 questions correctly, you win! Answer well, my friends!  
+Directions: Answer the trivia questions.  Each correct answer results in good vibes and no extra drawn body parts. Each incorrect answer gets the stick figure man one step closer to oblivion.  If you answer 7 questions correctly, you win! Answer well, my friends!  
 
 This is a one person game, but can be played cooperatively as a team. Are you ready? Click the button if you're ready.
 (Displayed on initial loading of the page as well)
